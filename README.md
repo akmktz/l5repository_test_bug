@@ -1,4 +1,7 @@
-## <a name="deployment"></a> Deployment
+# l5 repository bug
+If an array $attributes exists in the model, its data is written to the table when the repository is updated
+
+## Deployment
 Composer
  ```
 ~$ composer install
@@ -7,6 +10,10 @@ Composer
 Copy that example file as our main .env file with this command:
  ```
 ~$ cp .env.example .env
+```
+Key generate
+```
+~$ php artisan key:generate
 ```
 Edit that new .env file (required variables):
  ```
@@ -17,10 +24,6 @@ DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=
 
-```
-Key generate
-```
-~$ php artisan key:generate
 ```
 Migrations
 ```
